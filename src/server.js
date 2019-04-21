@@ -11,7 +11,7 @@ server.use(cors());
 server.use(express.json());
 
 server.use('/api/v1', routes);
-
+server.get('*', (req, res) => res.status(404).json({ message: 'Route does not exist' }));
 const port = process.env.PORT || 3000;
 server.listen(port, () => {
   console.log('listening on port', port);
