@@ -18,7 +18,8 @@
   "nyc": {
     "exclude": [
       "coverage/*",
-      "tests/*"
+      "tests/*",
+      "build/*"
     ],
     "all": true,
     "reporter": [

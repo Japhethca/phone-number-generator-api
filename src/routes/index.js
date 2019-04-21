@@ -25,7 +25,7 @@ router.get('/numbers',
   .post('/numbers',
     validate({
       body: {
-        noOfNumbers: joi.number().required(),
+        noOfNumbers: joi.number().required().min(1).max(10000),
       },
     }),
     createPhoneNumbers)

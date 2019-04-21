@@ -16,7 +16,7 @@ export default function validatorMiddleWare(schema) {
       if (result.error) {
         hasError = true;
         const errors = result.error.details.map(error => error.message);
-        res.status(422).json({
+        res.status(400).json({
           status: 'error',
           errors,
         });
