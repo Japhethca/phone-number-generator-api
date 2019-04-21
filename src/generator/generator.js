@@ -1,3 +1,4 @@
+
 /**
  * @export
  * @returns {Number}
@@ -32,7 +33,7 @@ export function padWithZero(number, lengthOfNumbers = 10) {
 export function generateNNumbers(noOfNumbers = 10) {
   const numbers = new Set();
 
-  while (numbers.size !== noOfNumbers) {
+  while (numbers.size !== Number.parseInt(noOfNumbers, 10)) {
     numbers.add(padWithZero(getRandomNumber()));
   }
   return Array.from(numbers);
